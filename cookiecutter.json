@@ -1,0 +1,8 @@
+{
+	"project_repository_name": "project-name",
+	"python_package_name": "package_name",
+	"package_version": "0.1.0",
+	"author": "Your Name",
+	"author_email": "your@email.com",
+	"minimum_python_version": ["3.9", "3.10", "3.11"]
+}

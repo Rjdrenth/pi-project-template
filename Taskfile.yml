@@ -1,0 +1,42 @@
+version: '3'
+
+tasks:
+  pre-commit-install:
+    desc: Install pre-commit for your repository so it runs after each commit.
+    cmds:
+      - echo ""
+      - echo "----------------------"
+      - echo "- Installing pre-commit.."
+      - echo "----------------------"
+      - pre-commit install
+      - echo "Finished installing pre-commit."
+    silent: true
+
+  pre-commit-uninstall:
+    desc: Uninstall pre-commit for your repository so it no longer runs after each commit.
+    cmds:
+      - echo ""
+      - echo "----------------------"
+      - echo "- Uninstalling pre-commit.."
+      - echo "----------------------"
+      - pre-commit uninstall
+      - echo "Finished uninstalling pre-commit."
+    silent: true
+
+  pre-commit-all:
+    desc: Apply pre-commit to all files.
+    cmds:
+      - pre-commit run --all-files
+    silent: true
+
+  bump-version-minor:
+    desc: Increases the major version of your project according to semantic versioning. In "x.y.z" the "x" is increased.
+    cmds:
+      - bump2version minor
+    silent: true
+
+  bump-version-patch:
+    desc: Increases the minor version of your project according to semantic versioning. In "x.y.z" the "y" is increased.
+    cmds:
+      - bump2version patch
+    silent: true

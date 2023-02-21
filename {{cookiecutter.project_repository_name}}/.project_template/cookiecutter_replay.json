@@ -1,0 +1,12 @@
+{
+	"cookiecutter":
+	{
+		"project_repository_name": "{{cookiecutter.project_repository_name}}_temp",
+		"python_package_name": "{{cookiecutter.python_package_name}}",
+		"_template": "git+ssh://git@github.com:Rjdrenth/pi-project-template.git",
+		"package_version": "{{cookiecutter.package_version}}",
+		"author": "{{cookiecutter.author}}",
+		"author_email": "{{cookiecutter.author_email}}",
+		"minimum_python_version": "{{cookiecutter.minimum_python_version}}"
+	}
+}

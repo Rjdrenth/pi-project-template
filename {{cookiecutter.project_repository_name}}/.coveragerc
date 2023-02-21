@@ -1,0 +1,4 @@
+[run]
+omit =
+	# Exclude all scripts
+	{{cookiecutter.python_package_name}}/scripts/**
