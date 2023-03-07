@@ -1,9 +1,9 @@
 # π Python Project Template
 
 
-![](https://img.shields.io/badge/π__project__template-1.0.0-green)
+![](https://img.shields.io/badge/π__project__template-1.0.1-green)
 
-The current version of the π project template is `1.0.0`
+The current version of the π project template is `1.0.1`
 
 ## TLDR
 
