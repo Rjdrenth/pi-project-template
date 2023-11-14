@@ -33,6 +33,16 @@ line-length = 120
 profile = "black"
 multi_line_output = 3
 
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "default"
+
+# Define any private repositories here
+# [[tool.poetry.source]]
+# name = "your-private-repo"
+# url = "url to your prive repo"
+# priority = "supplemental"
+
 [coverage.paths]
 source = "{{cookiecutter.python_package_name}}"
 
