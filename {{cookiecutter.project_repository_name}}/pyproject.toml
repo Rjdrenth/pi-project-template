@@ -5,8 +5,8 @@ description = ""
 authors = ["{{cookiecutter.author}} <{{cookiecutter.author_email}}>"]
 
 [tool.poetry.dependencies]
-python = ">={{cookiecutter.minimum_python_version}},<3.12"
-python-dotenv = "^1.0.0"
+python = ">={{cookiecutter.minimum_python_version}},<3.13"
+python-dotenv = "^1.0.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.12.0"
@@ -23,7 +23,7 @@ pytest-cov = "^4.0.0"
 pytest-html = "^3.2.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
@@ -35,7 +35,7 @@ multi_line_output = 3
 
 [[tool.poetry.source]]
 name = "PyPI"
-priority = "default"
+priority = "primary"
 
 # Define any private repositories here
 # [[tool.poetry.source]]
