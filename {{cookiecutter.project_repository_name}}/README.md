@@ -4,7 +4,7 @@
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![pi-project-template](https://img.shields.io/badge/π__project__template-1.0.1-green)](https://github.com/Rjdrenth/pi-project-template)
+[![pi-project-template](https://img.shields.io/badge/π__project__template-1.0.2-green)](https://github.com/Rjdrenth/pi-project-template)
 ![coverage report](assets/images/coverage.svg)
 
 ## Project tools & prerequisities
