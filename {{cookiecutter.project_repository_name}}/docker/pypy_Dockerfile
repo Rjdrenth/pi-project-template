@@ -1,5 +1,5 @@
 # Python Image
-FROM pypy:3.9-slim
+FROM pypy:3.10-slim
 
 ARG DEPLOYMENT_ENV=dev
 
