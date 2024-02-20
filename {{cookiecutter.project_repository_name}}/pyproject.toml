@@ -5,7 +5,7 @@ description = ""
 authors = ["{{cookiecutter.author}} <{{cookiecutter.author_email}}>"]
 
 [tool.poetry.dependencies]
-python = ">={{cookiecutter.minimum_python_version}},<3.12"
+python = ">={{cookiecutter.minimum_python_version}},<3.13"
 python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
