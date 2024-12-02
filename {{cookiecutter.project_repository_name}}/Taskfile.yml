@@ -85,11 +85,25 @@ tasks:
   initialise-project:
     desc: "\n    Initialises your project by: \n     1) creating the poetry virtual environment \n     2) Installing pre-commit \n     3) Registering the virtual environment as jupyter kernel"
     cmds:
-      - {% raw %}'{{if eq OS "windows"}}{% endraw %}powershell "copy {{cookiecutter.project_repository_name}}.env.template {{cookiecutter.project_repository_name}}.env"{% raw %}{{end}}{% endraw %}'
-      - {% raw %}'{{if eq OS "linux"}}{% endraw %}cp {{cookiecutter.project_repository_name}}.env.template {{cookiecutter.project_repository_name}}.env{% raw %}{{end}}{% endraw %}'
+      - task: copy-template-files
       - task: poetry
       - task: pre-commit-install
       - task: register-jupyter-kernel
+    silent: true
+
+  copy-template-files:
+    desc: "Copies the project template files and creates their regular versions, as long as those don't exist yet. Existing files will not be overwritten."
+    cmds:
+      - task: copy-template-file-{{cookiecutter.project_repository_name}}.env
+    silent: true
+
+  copy-template-file-*:
+    desc: "Create a copy of the specified template file. The file should be specified without the `.tempate` postfix."
+    vars:
+      FILE: '{{index .MATCH 0}}'
+    cmds:
+      - '{{if eq OS "windows"}}powershell "if (-Not (Test-Path {{.FILE}})) { Copy-Item {{.FILE}}.template {{.FILE}} } else { Write-Host "{{.FILE}} file already exists." }"{{end}}'
+      - '{{if eq OS "linux"}}[ ! -e {{.FILE}} ] && cp {{.FILE}}.template {{.FILE}} || echo "{{.FILE}} file already exists."{{end}}'
     silent: true
 
   bump-version-major:
